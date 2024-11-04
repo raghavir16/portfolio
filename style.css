@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -7,39 +8,75 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
+    background-color: #f9f9f9;
     line-height: 1.6;
-    background-color: #f4f4f4;
 }
 
-header, section {
-    max-width: 800px;
+/* Header styling */
+header {
+    text-align: center;
+    padding: 2em;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+header a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Main section styling */
+section {
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    color: #333;
-    font-size: 2.2em;
-    margin-bottom: 10px;
-}
-
-header p, section h2, ul li {
-    font-size: 1em;
-    margin-bottom: 8px;
-}
-
-h2 {
+section h2 {
     color: #333;
     font-size: 1.8em;
     margin-bottom: 10px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #f76c6c;
+    padding-bottom: 5px;
 }
 
+/* Job and project card styling */
 .job, .project {
     margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job:hover, .project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.job h3, .project h3 {
+    color: #f76c6c;
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+.job p, .project p {
+    font-size: 0.9em;
+    color: #666;
 }
 
 ul {
@@ -47,9 +84,46 @@ ul {
     margin-left: 20px;
 }
 
+ul li {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Skills section styling */
+#skills {
+    text-align: center;
+}
+
+#skills p {
+    padding: 10px;
+    background-color: #f76c6c;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.1em;
+    max-width: 800px;
+}
+
+/* Footer styling */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
     font-size: 0.9em;
-    color: #666;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Links styling */
+a {
+    color: #f76c6c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
