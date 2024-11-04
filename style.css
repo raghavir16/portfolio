@@ -1,129 +1,161 @@
-
-* {
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* Root variables */
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #ffffff;
+    --accent-color: #34a853;
+    --text-color: #333333;
+    --background-color: #f4f4f9;
+    --font-family-sans: "Roboto", sans-serif;
+    --font-family-mono: "Courier New", monospace;
+}
+
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    line-height: 1.6;
+    font-family: var(--font-family-sans);
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Header styling */
-header {
+/* Utility classes */
+.text-center {
     text-align: center;
-    padding: 2em;
-    background-color: #333;
-    color: #fff;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.3em;
+.text-uppercase {
+    text-transform: uppercase;
 }
 
-header p {
-    font-size: 1.1em;
-    color: #ddd;
+.font-bold {
+    font-weight: bold;
 }
 
-header a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-/* Main section styling */
-section {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
+.shadow-lg {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    color: #333;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #f76c6c;
-    padding-bottom: 5px;
+.rounded {
+    border-radius: 0.5rem;
 }
 
-/* Job and project card styling */
-.job, .project {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f4f4f4;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+.transition-all {
+    transition: all 0.3s ease;
 }
 
-.job:hover, .project:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.job h3, .project h3 {
-    color: #f76c6c;
-    font-size: 1.4em;
-    margin-bottom: 0.5em;
-}
-
-.job p, .project p {
-    font-size: 0.9em;
-    color: #666;
-}
-
-ul {
-    list-style-type: square;
-    margin-left: 20px;
-}
-
-ul li {
-    margin-bottom: 5px;
-    color: #333;
-}
-
-/* Skills section styling */
-#skills {
+/* Header */
+header {
+    padding: 3rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
 }
 
-#skills p {
-    padding: 10px;
-    background-color: #f76c6c;
-    color: #fff;
-    border-radius: 5px;
-    display: inline-block;
-    font-size: 1.1em;
-    max-width: 800px;
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.9em;
-    margin-top: 20px;
+header p {
+    font-size: 1.25rem;
+    color: #d3dce6;
 }
 
-footer p {
-    margin-bottom: 5px;
-}
-
-/* Links styling */
-a {
-    color: #f76c6c;
-    text-decoration: none;
-}
-
-a:hover {
+header a {
+    color: var(--secondary-color);
+    font-weight: bold;
     text-decoration: underline;
+}
+
+header a:hover {
+    color: var(--accent-color);
+}
+
+/* Sections */
+section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Titles */
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    display: block;
+    margin-top: 5px;
+    transition: width 0.3s;
+}
+
+section h2:hover::after {
+    width: 100px;
+}
+
+/* Cards */
+.card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+ul li::before {
+    content: "✔";
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    section {
+        padding: 3rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
 }
