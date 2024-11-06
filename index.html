@@ -3,61 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raghavi Ramesh</title>
-    <meta name="description" content="Raghavi Ramesh is a software engineer who builds accessible, inclusive products and digital experiences for the web.">
-    <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="Raghavi Ramesh">
-    <meta property="og:description" content="Raghavi Ramesh is a software engineer specializing in backend development and machine learning applications.">
-    <meta property="og:image" content="path/to/image.jpg">
-    <meta property="og:url" content="https://raghaviramesh.com">
+    <title>Raghavi Ramesh - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-900 text-slate-400 leading-relaxed antialiased selection:bg-teal-300 selection:text-teal-900">
-
-    <header class="p-6 text-center bg-gradient-to-br from-teal-400 to-blue-500 text-white">
-        <h1 class="text-4xl font-bold">Raghavi Ramesh</h1>
-        <h2 class="mt-3 text-lg">Software Engineer & ML Enthusiast</h2>
-        <p class="mt-4">I build engaging, accessible, and innovative digital solutions.</p>
-        <nav class="mt-8 flex justify-center space-x-8">
-            <a href="#about" class="text-sm font-semibold hover:text-teal-300">About</a>
-            <a href="#experience" class="text-sm font-semibold hover:text-teal-300">Experience</a>
-            <a href="#projects" class="text-sm font-semibold hover:text-teal-300">Projects</a>
+<body>
+    <header id="header">
+        <nav>
+            <h1>Raghavi Ramesh</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
+        <div class="hero">
+            <h2>Machine Learning Engineer</h2>
+            <p>Curious and impact-driven, with a foundation in software development and a passion for AI solutions that address real-world challenges.</p>
+            <a href="#projects" class="button">View My Work</a>
+        </div>
     </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>As a Machine Learning Engineer with software development expertise, I focus on solving complex problems with AI. Dedicated to continuous learning and creating a positive impact on society.</p>
+    </section>
 
-    <main class="px-6 py-12 max-w-3xl mx-auto">
-        <section id="about" class="mb-16">
-            <h2 class="text-2xl font-bold text-teal-300">About Me</h2>
-            <p class="mt-4">I'm a software engineer passionate about solving real-world problems using data-driven, machine learning approaches.</p>
-        </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Software Engineer - Epsilon</h3>
+            <p><em>Aug 2021 - Sep 2023, Bangalore, India</em></p>
+            <ul>
+                <li>Developed and maintained websites for a major European biopharma client using C# and .NET Framework.</li>
+                <li>Led backend development, managing user-driven web forms, data handling with SQL Server, and CRM integration.</li>
+                <li>Improved site performance, accessibility, and SEO, achieving over 90% on key metrics.</li>
+                <li>Collaborated within an Agile framework with cross-functional teams to align web strategies with business objectives.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Software Engineer Intern - Epsilon</h3>
+            <p><em>Jan 2021 - Aug 2021, Bangalore, India</em></p>
+            <ul>
+                <li>Optimized reusable web components, enhancing development efficiency and consistency.</li>
+                <li>Implemented interactive front-end features using JavaScript, jQuery, HTML, and CSS.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Intern - Indian Space Research Organisation</h3>
+            <p><em>June 2019, Sriharikota, India</em></p>
+            <ul>
+                <li>Trained with the Range Tracking Systems division on RADAR range operations.</li>
+                <li>Developed a MATLAB-based model for analyzing RADAR signals to predict target satellite distance.</li>
+            </ul>
+        </div>
+    </section>
 
-        <section id="experience" class="mb-16">
-            <h2 class="text-2xl font-bold text-teal-300">Experience</h2>
-            <div class="mt-8">
-                <div class="bg-slate-800 p-4 rounded shadow-lg mb-4">
-                    <h3 class="text-xl font-semibold text-white">Software Engineer | Epsilon</h3>
-                    <p class="text-sm text-slate-500">Aug 2021 - Sep 2023</p>
-                    <ul class="mt-2 text-slate-400 list-disc pl-5">
-                        <li>Developed and optimized backend systems using .NET.</li>
-                        <li>Integrated automated workflows and DocuSign solutions.</li>
-                    </ul>
-                </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>Physics Problem-Solving LLM</h3>
+                <p>Fine-tuned an LLM (Numina Math TIR 7B) using LoRA on an A100 GPU to solve advanced physics problems, achieving high accuracy.</p>
             </div>
-        </section>
-
-        <section id="projects" class="mb-16">
-            <h2 class="text-2xl font-bold text-teal-300">Projects</h2>
-            <div class="mt-8">
-                <div class="bg-slate-800 p-4 rounded shadow-lg mb-4">
-                    <h3 class="text-xl font-semibold text-white">Autonomous Driving Model</h3>
-                    <p class="text-slate-400">Built a MobileNetV3 model for angle prediction with extensive data augmentation.</p>
-                </div>
+            <div class="project-card">
+                <h3>Assessing Breast Cancer Response to Chemotherapy</h3>
+                <p>Developed predictive models using clinical and MRI data, achieving 0.70 accuracy for PCR and a 0.15 MAE for RFS prediction.</p>
             </div>
-        </section>
-    </main>
+            <div class="project-card">
+                <h3>Predicting Contact Maps in Bioinformatics</h3>
+                <p>Built an ensemble model with PySpark to enhance contact map prediction accuracy, achieving an AUC of 0.74 with Random Forest.</p>
+            </div>
+            <div class="project-card">
+                <h3>Programming an Autonomous Driving Car</h3>
+                <p>Developed deep learning models for vehicle navigation using MobileNetV3 Small, achieving MSE of 0.008 (angle) and 0.013 (speed).</p>
+            </div>
+        </div>
+    </section>
 
-    <footer class="text-center text-slate-500 text-sm pb-6">
-        <p>Designed & Built by Raghavi Ramesh</p>
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Awarded the South Asia Postgraduate Excellence Scholarship by the University of Nottingham.</li>
+            <li>Received a Rewards and Recognition Award at Epsilon for outstanding contributions.</li>
+            <li>Elected Vice Chairperson of IEEE Women in Engineering Student Branch, organizing events featured in the IEEE Bangalore Section Newsletter.</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Python | C++ | C# | JavaScript | Data Analysis | Data Processing | SQL | Statistics | ML Algorithms | Deep Learning | NLP | Large Language Models (LLMs) | CNNs | Reinforcement Learning | PyTorch | TensorFlow | Computer Vision | Image Processing | ETL | Spark (PySpark) | MLlib | Docker | Kubernetes | CI/CD | Backend Development | .NET Framework | SOAP API | REST API | Problem Solving | Leadership | Communication | Adaptability | Creativity | Teamwork</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:raghaviramrao@gmail.com">raghaviramrao@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/raghaviramrao">linkedin.com/in/raghaviramrao</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Raghavi Ramesh. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
